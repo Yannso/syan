@@ -9,7 +9,7 @@ public class quickSort {
     }
 
     private void sort(int[] arr, int le, int ri) {
-        //  有大于号是因为划分返回的p有随机性，很可能比le小
+        //  有大于号是因为上一轮划分的p有随机性，赋值到这一轮的ri很可能比le小
         if (le >= ri) return;
         int p = partition(arr,le,ri);
         sort(arr,le,p-1);
