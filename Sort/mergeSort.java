@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class mergeSort {
-    private int[] temp;
+    private int[] temp; //  使用全局变量，减少时间复杂度
 
     public mergeSort(int[] arr) {
         int n = arr.length;
