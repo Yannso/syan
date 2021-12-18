@@ -29,13 +29,13 @@ public class countingSort {
         int[] copyOfArr = new int[n];
         System.arraycopy(arr,0,copyOfArr,0,n);
         for (int i = n - 1; i >= 0; i--) {
-            //  copy[i]元素的最后一个位置的index 在 prefex[copy[i]] - 1这个位置
+            //  copy[i]元素可能有多个，其最后一个index位于prefex[copy[i]] - 1这个位置
             int pos = prefix[copyOfArr[i]] - 1;
             arr[pos] = copyOfArr[i];
             prefix[copyOfArr[i]]--;
         }
     }
-    //  不使用前缀和  
+    //  不使用前缀和
     private void sortv2(int[] arr) {
         int idx = 0;
         for (int i = 0; i < count.length; i++) {
@@ -52,5 +52,4 @@ public class countingSort {
         countingSort countingSort = new countingSort(nums);
         System.out.println(Arrays.toString(nums));
     }
-
 }
