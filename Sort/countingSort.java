@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class countingSort {
     int n;  //  数组的大小
     int[] count;    //  计数数组
-    int m;
+    int m;  //  arr数组中最大元素
     public countingSort(int[] arr) {
         //  arr数组中的元素必须全是正的
         this.n = arr.length;
@@ -17,9 +17,9 @@ public class countingSort {
         }
         sortv1(arr);
     }
-
+    //  使用前缀和数组
     private void sortv1(int[] arr) {
-        //  原数组 ->  计数数组    ->  技术数组的前缀和数组
+        //  原数组 ->  计数数组    ->  计数数组的前缀和数组
         //  [1,2,2,3,3,4] -> [0,1,2,2,1] -> [0,1,3,5,6]
         int[] prefix = new int[m+1];
         prefix[0] = count[0];
@@ -35,7 +35,7 @@ public class countingSort {
             prefix[copyOfArr[i]]--;
         }
     }
-
+    //  不使用前缀和  
     private void sortv2(int[] arr) {
         int idx = 0;
         for (int i = 0; i < count.length; i++) {
