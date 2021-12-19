@@ -1,4 +1,5 @@
 public class Lc997 {
+    //  图的出度入度问题
     public int findJudge(int n, int[][] trust) {
         int[] inbound = new int[n+1];
         int[] outbound = new int[n+1];
