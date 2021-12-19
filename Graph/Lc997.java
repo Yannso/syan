@@ -1,5 +1,6 @@
 public class Lc997 {
     //  图的出度入度问题
+    //  https://leetcode-cn.com/problems/find-the-town-judge/
     public int findJudge(int n, int[][] trust) {
         int[] inbound = new int[n+1];
         int[] outbound = new int[n+1];
