@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include<unistd.h>
 
+/*
+ * 运算操作*/
 void operation() {
     int ff = 0;
     int gg = 0;

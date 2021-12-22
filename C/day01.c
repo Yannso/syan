@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
-
+/*
+ *基础数据类型 */
 void print() {
     int a = 1;
     float b = 123.1;
@@ -14,7 +15,8 @@ void print() {
     string1[0] = 'i';
     //  %d  十进制     %o  八进制     %x  十六进制
     //  %d  整型十进制       %hd 短整型     %ld 长整型     %lld    长长整型
-    //  %c  char字符型    %f  浮点型      %s  字符串型
+    //  %c  char字符型     %s  字符串型
+    //  %f  float单精度浮点型     %lf  double双精度浮点型
     printf("a=%d\n"
            "b=%f\n"
            "c=%lf\n"
@@ -45,6 +47,7 @@ void numeration() {
     int b = 011;    //  0开头
     int c = 0x1a;   //  0x开头
     //  C编译器不能使用 printf 函数输出二进制
+    //  %d代表十进制输出，%o代表以八进制输出，%x代表以十六进制输出
     //  在格式控制符中加上#，就可以在输出时带上特定的前缀，以便区分不同进制数字。
     printf("a=%d\n"
            "b=%o\n"

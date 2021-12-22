@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*
+ * 循环结构与选择结构
+ * */
 
 int normalx;//  默认是0
 

@@ -4,6 +4,7 @@
 
 void createArray(){
     /*
+     * 二维数组与字符串数组
      * 数组初始化时，如果给全部元素赋值，那么在定义数组时可以不给出数组长度，大小将会自动推算
      * 可以只给部分元素赋值。当{ }中值的个数少于元素个数时，只给前面部分元素赋值，而后面的元素会自动赋值为0
      * 只能逐个赋值，而不能整体赋值。
@@ -73,13 +74,13 @@ void charArray() {
     for (int c = 65; c <= 90 ; ++c) {
         chars[c-65] = c;
     }
-    printf("there are 4 redundant chars: %s\n",chars);
+    printf("there are 24 chars and 4 redundant random chars: %s\n",chars);
     //  为了避免手动加'\0'的方式，最好的办法是，为chars数组初始化为0。因为根据 ASCII 码表，字符'\0'的编码值就是 0。
     char chars2[30] = {0};
     for (int c = 65; c <= 90 ; ++c) {
         chars2[c-65] = c;
     }
-    printf("there are only 24 chars: %s\n",chars2);
+    printf("If i add the string end symbol \'\\0\' there are only 24 chars: %s\n",chars2);
 }
 
 void inputOutputArray() {
@@ -126,6 +127,7 @@ void charOperate() {
 
 
 int main() {
+    charArray();
     return 0;
 }
 
