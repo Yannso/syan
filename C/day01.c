@@ -88,12 +88,6 @@ void signedNumber() {
     //  运行上面结果，发现不带符号位的数字，所有的位都用来表示数值，正数的取值范围更大了
 }
 
-void printChinese() {
-    setlocale(LC_ALL, "chs");
-    wchar_t str[] = L"我是李华，来自加利福尼亚大学\n";
-    wprintf(L"%ls",str);
-    wprintf(L"%lc %lc %lc %lc",str[0],str[1],str[2],str[3]);
-}
 
 void convert() {
     //  转义字符

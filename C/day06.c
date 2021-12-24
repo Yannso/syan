@@ -83,7 +83,7 @@ void arrayPointer() {
      * */
     int arr[] = {99, 15, 100, 892, 252};
     int len = sizeof(arr) / sizeof(int);
-    //  这两种获取数组元素方法等价
+    //  arr[i]  *(arr + i)  *(p + i)  这三种获取数组元素方法等价
     for (int i = 0; i < len; ++i) {
         printf("%d\t", arr[i]);
     }

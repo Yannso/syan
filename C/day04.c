@@ -48,8 +48,11 @@ void charArray() {
      * 在C语言中，没有专门的字符串变量，没有string类型，通常就用一个字符数组来存放一个字符串。
      * C语言规定，可以将字符串直接赋值给字符数组*/
     char string[] = "Bu Yansong";
-    //  等价于 char string[] = {"Bu Yansong"};
-    //  因为string在初始化时，末尾是有'\0'的，因此使用sizeof 表达式 得出数组大小为11，如果使用strlen函数 得出数组大小为10
+    /*
+     *   等价于 char string[] = {"Bu Yansong"};
+     *   直接赋值，可以不指定大小
+     *   因为string在初始化时，末尾是有'\0'的，因此使用sizeof 表达式 得出数组大小为11，如果使用strlen函数 得出数组大小为10
+     **/
     printf("%s size is %d \n",string, strlen(string));
     /*
      * string2 = "abcde";  会报错

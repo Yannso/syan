@@ -94,11 +94,26 @@ void input() {
     //  getchar()	有缓冲区	头文件stdio.h	有回显	适用于Windows、Linux、Mac OS 等所有平台
     //  getche()    getch() 没有缓冲区
 }
-
+void inputString() {
+    int n;
+    scanf("%d ",&n);
+    char str[n+1];  //  因为n不确定，所以只能初始化，不能赋值
+    for (int i = 0; i < n; ++i) {
+        //  大坑！！！
+        //  使用%c输入字符时，会把空格字符和转义字符（包括回车）都会被当作有效字符输入
+        scanf("%c",&str[i]);
+    }
+    //  回车之后，回车这个转移字符仍然在缓冲区内，因此下一个%c，就会接收到这个转义字符
+    char c;
+    scanf("%c",&c);
+    str[n] = 0;
+    printf("%s",str);
+    printf("%c",c);
+}
 
 
 int main() {
-    input();
+    inputString();
     return 0;
 }
 
